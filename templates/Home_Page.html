@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+{% load static%}
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>taklif_noma</title>
+    <link rel="stylesheet" href="{% static 'css/Home_Page.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <span>Taklif_noma</span>
+            <div class="logo-icon">
+                <div class="small-square top"></div>
+                <div class="small-square middle"></div>
+                <div class="small-square bottom"></div>
+                <div class="heart"><svg viewBox="0 0 24 24" width="20" height="20" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M12 21.35c-.2 0-.4-.07-.55-.2C7.4 17.9 3 14.2 3 9.85 3 6.98 5.24 4.75 8.05 4.75c1.6 0 3.13.76 4 1.97a4.9 4.9 0 0 1 4-1.97C18.76 4.75 21 6.98 21 9.85c0 4.35-4.4 8.05-8.45 11.3-.15.13-.35.2-.55.2Z"/></svg></div>
+            </div>
+        </div>
+        <nav>
+            <a href="{% url 'biz_haqimizda' %}">Biz haqimizda</a>
+            <a href="{% url 'boglanish' %}">Bog‘lanish</a>
+        </nav>
+    </header>
+    <main class="hero">
+        <section class="hero-content">
+            <h1>
+                <span class="purple">Elektron</span>
+                <span class="pink">Taklifnomalarni</span>
+                <span class="white">Oson Yarating</span>
+            </h1>
+            <p>
+                Zamonaviy va ajoyib taklifnomalarni yarating.
+                To'y, tug'ilgan kun, yubiley va boshqa marosimlar
+                uchun o'zingizning shaxsiy taklifnomangizni yarating.
+            </p>
+            <a href="#" class="start-btn">
+                Boshlash
+                <span>→</span>
+            </a>
+        </section>
+        <section class="hero-image">
+            <div class="purple-card"></div>
+            <div class="dark-card"></div>
+            <div class="image-wrapper">
+                <img src="/static/images/images.jpg" alt="Taklifnoma">
+            </div>
+
+        </section>
+    </main>
+            <center>
+            <h1>Taklifnoma Shablonlari</h1>
+            <p>Turli marosimlar uchun mo'ljallangan zamonaviy taklifnoma shablonlari bilan tanishing</p>
+            <button class="button" >Barchasi</button>
+            <button class="btn1"><a class="s" href="{% url 'toy' %}">To'y</a></button>
+            <button class="btn1"><a class="s" href="{% url 'tugulgankun' %}">Tug'ulgan kun</a></button>
+            <button class="btn1"><a class="s" href="{% url 'Yubley' %}">Yubley</a></button>
+            <button class="btn1"><a class="s" href="{% url 'Qiz' %}">Qiz uzatish</a></button>
+            <button class="btn1"><a class="s" href="{% url 'eloshi' %}">El oshi</a></button>
+
+        </center>
+    <div class="cards-grid">
+
+        <div class="card">
+            <img src="{% static 'images/yabley1.png' %}" alt="50 yosh yubiley">
+            <div class="card-info">
+                <h3>50 Yosh Yubiley</h3>
+                <p>50 yosh yubiley uchun nafis va zamonaviy taklifnoma.</p>
+            </div>
+        
+                <div class="card-pricing">
+                    <div><strong>40 000 so‘m</strong> <span>— 100 ta taklifnoma</span></div>
+                    <div><strong>70 000 so‘m</strong> <span>— 200 ta taklifnoma</span></div>
+                    <div><strong>120 000 so‘m</strong> <span>— 500 ta taklifnoma</span></div>
+                    <div><strong>200 000 so‘m</strong> <span>— 1000 ta taklifnoma</span></div>
+                </div>
+            </div>
+
+        <div class="card">
+            <img src="{% static 'images/yabley2.png' %}" alt="60 yosh yubiley">
+            <div class="card-info">
+                <h3>60 Yosh Yubiley</h3>
+                <p>60 yosh yubileyingizni yaqinlaringiz bilan nishonlang.</p>
+            </div>
+        
+                <div class="card-pricing">
+                    <div><strong>40 000 so‘m</strong> <span>— 100 ta taklifnoma</span></div>
+                    <div><strong>70 000 so‘m</strong> <span>— 200 ta taklifnoma</span></div>
+                    <div><strong>120 000 so‘m</strong> <span>— 500 ta taklifnoma</span></div>
+                    <div><strong>200 000 so‘m</strong> <span>— 1000 ta taklifnoma</span></div>
+                </div>
+            </div>
+
+        <div class="card">
+            <img src="{% static 'images/yubley3.png' %}" alt="70 yosh yubiley">
+            <div class="card-info">
+                <h3>70 Yosh Yubiley</h3>
+                <p>70 yosh yubiley uchun klassik va chiroyli taklifnoma.</p>
+            </div>
+        
+                <div class="card-pricing">
+                    <div><strong>40 000 so‘m</strong> <span>— 100 ta taklifnoma</span></div>
+                    <div><strong>70 000 so‘m</strong> <span>— 200 ta taklifnoma</span></div>
+                    <div><strong>120 000 so‘m</strong> <span>— 500 ta taklifnoma</span></div>
+                    <div><strong>200 000 so‘m</strong> <span>— 1000 ta taklifnoma</span></div>
+                </div>
+            </div>
+
+        <div class="card">
+            <img src="{% static 'images/yubley4.png' %}" alt="40 yosh yubiley">
+            <div class="card-info">
+                <h3>40 Yosh Yubiley</h3>
+                <p>40 yosh yubiley uchun maxsus tayyorlangan dizayn.</p>
+            </div>
+        
+                <div class="card-pricing">
+                    <div><strong>40 000 so‘m</strong> <span>— 100 ta taklifnoma</span></div>
+                    <div><strong>70 000 so‘m</strong> <span>— 200 ta taklifnoma</span></div>
+                    <div><strong>120 000 so‘m</strong> <span>— 500 ta taklifnoma</span></div>
+                    <div><strong>200 000 so‘m</strong> <span>— 1000 ta taklifnoma</span></div>
+                </div>
+            </div>
+
+        <div class="card">
+            <img src="{% static 'images/yubley5.png' %}" alt="25 yosh yubiley">
+            <div class="card-info">
+                <h3>25 Yosh Yubiley</h3>
+                <p>25 yillik yubiley uchun nafis taklifnoma.</p>
+            </div>
+        
+                <div class="card-pricing">
+                    <div><strong>40 000 so‘m</strong> <span>— 100 ta taklifnoma</span></div>
+                    <div><strong>70 000 so‘m</strong> <span>— 200 ta taklifnoma</span></div>
+                    <div><strong>120 000 so‘m</strong> <span>— 500 ta taklifnoma</span></div>
+                    <div><strong>200 000 so‘m</strong> <span>— 1000 ta taklifnoma</span></div>
+                </div>
+            </div>
+
+        <div class="card">
+            <img src="{% static 'images/yubley6.png' %}" alt="30 yosh yubiley">
+            <div class="card-info">
+                <h3>30 Yosh Yubiley</h3>
+                <p>30 yosh yubiley uchun zamonaviy va yorqin dizayn.</p>
+            </div>
+        
+                <div class="card-pricing">
+                    <div><strong>40 000 so‘m</strong> <span>— 100 ta taklifnoma</span></div>
+                    <div><strong>70 000 so‘m</strong> <span>— 200 ta taklifnoma</span></div>
+                    <div><strong>120 000 so‘m</strong> <span>— 500 ta taklifnoma</span></div>
+                    <div><strong>200 000 so‘m</strong> <span>— 1000 ta taklifnoma</span></div>
+                </div>
+            </div>
+
+        <div class="card">
+            <img src="{% static 'images/yubiley7.png' %}" alt="55 yosh yubiley">
+            <div class="card-info">
+                <h3>55 Yosh Yubiley</h3>
+                <p>55 yosh yubiley uchun o‘ziga xos taklifnoma.</p>
+            </div>
+        
+                <div class="card-pricing">
+                    <div><strong>40 000 so‘m</strong> <span>— 100 ta taklifnoma</span></div>
+                    <div><strong>70 000 so‘m</strong> <span>— 200 ta taklifnoma</span></div>
+                    <div><strong>120 000 so‘m</strong> <span>— 500 ta taklifnoma</span></div>
+                    <div><strong>200 000 so‘m</strong> <span>— 1000 ta taklifnoma</span></div>
+                </div>
+            </div>
+
+        <div class="card">
+            <img src="{% static 'images/yubley8.png' %}" alt="65 yosh yubiley">
+            <div class="card-info">
+                <h3>65 Yosh Yubiley</h3>
+                <p>65 yosh yubiley uchun chiroyli va nafis dizayn.</p>
+            </div>
+        
+                <div class="card-pricing">
+                    <div><strong>40 000 so‘m</strong> <span>— 100 ta taklifnoma</span></div>
+                    <div><strong>70 000 so‘m</strong> <span>— 200 ta taklifnoma</span></div>
+                    <div><strong>120 000 so‘m</strong> <span>— 500 ta taklifnoma</span></div>
+                    <div><strong>200 000 so‘m</strong> <span>— 1000 ta taklifnoma</span></div>
+                </div>
+            </div>
+
+    </div>
+
+
+    <!-- ================= TO'Y ================= -->
+
+    <div class="category-title">
+        <h2>To‘y Taklifnomalari</h2>
+        <span>8 ta</span>
+    </div>
+
+    <div class="cards-grid">
+
+        <div class="card">
+            <img src="{% static 'images/toy_1.png' %}" alt="Klassik to‘y">
+            <div class="card-info">
+                <h3>Klassik To‘y</h3>
+                <p>An’anaviy va nafis to‘y marosimi uchun taklifnoma.</p>
+            </div>
+        
+                <div class="card-pricing">
+                    <div><strong>40 000 so‘m</strong> <span>— 100 ta taklifnoma</span></div>
+                    <div><strong>70 000 so‘m</strong> <span>— 200 ta taklifnoma</span></div>
+                    <div><strong>120 000 so‘m</strong> <span>— 500 ta taklifnoma</span></div>
+                    <div><strong>200 000 so‘m</strong> <span>— 1000 ta taklifnoma</span></div>
+                </div>
+            </div>
+
+        <div class="card">
+            <img src="{% static 'images/toy_2.png' %}" alt="Zamonaviy to‘y">
+            <div class="card-info">
+                <h3>Zamonaviy To‘y</h3>
+                <p>Zamonaviy uslubdagi chiroyli to‘y taklifnomasi.</p>
+            </div>
+        
+                <div class="card-pricing">
+                    <div><strong>40 000 so‘m</strong> <span>— 100 ta taklifnoma</span></div>
+                    <div><strong>70 000 so‘m</strong> <span>— 200 ta taklifnoma</span></div>
+                    <div><strong>120 000 so‘m</strong> <span>— 500 ta taklifnoma</span></div>
+                    <div><strong>200 000 so‘m</strong> <span>— 1000 ta taklifnoma</span></div>
+                </div>
+            </div>
+
+        <div class="card">
+            <img src="{% static 'images/toy_3.png' %}" alt="Yashil to‘y">
+            <div class="card-info">
+                <h3>Yashil To‘y</h3>
+                <p>Yashil ranglar uyg‘unligidagi nafis to‘y dizayni.</p>
+            </div>
+        
+                <div class="card-pricing">
+                    <div><strong>40 000 so‘m</strong> <span>— 100 ta taklifnoma</span></div>
+                    <div><strong>70 000 so‘m</strong> <span>— 200 ta taklifnoma</span></div>
+                    <div><strong>120 000 so‘m</strong> <span>— 500 ta taklifnoma</span></div>
+                    <div><strong>200 000 so‘m</strong> <span>— 1000 ta taklifnoma</span></div>
+                </div>
+            </div>
+
+        <div class="card">
+            <img src="{% static 'images/toy_4.png' %}" alt="Oq gul to‘y">
+            <div class="card-info">
+                <h3>Oq Gul To‘y</h3>
+                <p>Oq gullar bilan bezatilgan chiroyli taklifnoma.</p>
+            </div>
+        
+                <div class="card-pricing">
+                    <div><strong>40 000 so‘m</strong> <span>— 100 ta taklifnoma</span></div>
+                    <div><strong>70 000 so‘m</strong> <span>— 200 ta taklifnoma</span></div>
+                    <div><strong>120 000 so‘m</strong> <span>— 500 ta taklifnoma</span></div>
+                    <div><strong>200 000 so‘m</strong> <span>— 1000 ta taklifnoma</span></div>
+                </div>
+            </div>
+
+        <div class="card">
+            <img src="{% static 'images/toy_5.png' %}" alt="Oltin to‘y">
+            <div class="card-info">
+                <h3>Oltin To‘y</h3>
+                <p>Oltin rangdagi hashamatli to‘y taklifnomasi.</p>
+            </div>
+        
+                <div class="card-pricing">
+                    <div><strong>40 000 so‘m</strong> <span>— 100 ta taklifnoma</span></div>
+                    <div><strong>70 000 so‘m</strong> <span>— 200 ta taklifnoma</span></div>
+                    <div><strong>120 000 so‘m</strong> <span>— 500 ta taklifnoma</span></div>
+                    <div><strong>200 000 so‘m</strong> <span>— 1000 ta taklifnoma</span></div>
+                </div>
+            </div>
+
+        <div class="card">
+            <img src="{% static 'images/toy_6.png' %}" alt="Minimal to‘y">
+            <div class="card-info">
+                <h3>Minimal To‘y</h3>
+                <p>Sodda va zamonaviy minimal to‘y dizayni.</p>
+            </div>
+        
+                <div class="card-pricing">
+                    <div><strong>40 000 so‘m</strong> <span>— 100 ta taklifnoma</span></div>
+                    <div><strong>70 000 so‘m</strong> <span>— 200 ta taklifnoma</span></div>
+                    <div><strong>120 000 so‘m</strong> <span>— 500 ta taklifnoma</span></div>
+                    <div><strong>200 000 so‘m</strong> <span>— 1000 ta taklifnoma</span></div>
+                </div>
+            </div>
+
+        <div class="card">
+            <img src="{% static 'images/toy_7.png' %}" alt="Royal to‘y">
+            <div class="card-info">
+                <h3>Royal To‘y</h3>
+                <p>Hashamatli va jozibali royal uslubdagi taklifnoma.</p>
+            </div>
+        
+                <div class="card-pricing">
+                    <div><strong>40 000 so‘m</strong> <span>— 100 ta taklifnoma</span></div>
+                    <div><strong>70 000 so‘m</strong> <span>— 200 ta taklifnoma</span></div>
+                    <div><strong>120 000 so‘m</strong> <span>— 500 ta taklifnoma</span></div>
+                    <div><strong>200 000 so‘m</strong> <span>— 1000 ta taklifnoma</span></div>
+                </div>
+            </div>
+
+        <div class="card">
+            <img src="{% static 'images/toy_8.png' %}" alt="Rustik to‘y">
+            <div class="card-info">
+                <h3>Rustik To‘y</h3>
+                <p>Tabiiy va iliq rustik uslubdagi taklifnoma.</p>
+            </div>
+        
+                <div class="card-pricing">
+                    <div><strong>40 000 so‘m</strong> <span>— 100 ta taklifnoma</span></div>
+                    <div><strong>70 000 so‘m</strong> <span>— 200 ta taklifnoma</span></div>
+                    <div><strong>120 000 so‘m</strong> <span>— 500 ta taklifnoma</span></div>
+                    <div><strong>200 000 so‘m</strong> <span>— 1000 ta taklifnoma</span></div>
+                </div>
+            </div>
+
+    </div>
+
+
+    <!-- ================= TUG'ILGAN KUN ================= -->
+
+    <div class="category-title">
+        <h2>Tug‘ilgan Kun Taklifnomalari</h2>
+        <span>8 ta</span>
+    </div>
+
+    <div class="cards-grid">
+
+        <div class="card">
+            <img src="{% static 'images/birthday_1.png' %}" alt="Bolalar">
+            <div class="card-info">
+                <h3>Bolalar Uchun</h3>
+                <p>Bolalar tug‘ilgan kuni uchun quvnoq taklifnoma.</p>
+            </div>
+        
+                <div class="card-pricing">
+                    <div><strong>40 000 so‘m</strong> <span>— 100 ta taklifnoma</span></div>
+                    <div><strong>70 000 so‘m</strong> <span>— 200 ta taklifnoma</span></div>
+                    <div><strong>120 000 so‘m</strong> <span>— 500 ta taklifnoma</span></div>
+                    <div><strong>200 000 so‘m</strong> <span>— 1000 ta taklifnoma</span></div>
+                </div>
+            </div>
+
+        <div class="card">
+            <img src="{% static 'images/birthday_2.png' %}" alt="Qizlar">
+            <div class="card-info">
+                <h3>Qizlar Uchun</h3>
+                <p>Qizlar uchun chiroyli va rangli tug‘ilgan kun dizayni.</p>
+            </div>
+        
+                <div class="card-pricing">
+                    <div><strong>40 000 so‘m</strong> <span>— 100 ta taklifnoma</span></div>
+                    <div><strong>70 000 so‘m</strong> <span>— 200 ta taklifnoma</span></div>
+                    <div><strong>120 000 so‘m</strong> <span>— 500 ta taklifnoma</span></div>
+                    <div><strong>200 000 so‘m</strong> <span>— 1000 ta taklifnoma</span></div>
+                </div>
+            </div>
+
+        <div class="card">
+            <img src="{% static 'images/birthday_3.png' %}" alt="O‘g‘illar">
+            <div class="card-info">
+                <h3>O‘g‘illar Uchun</h3>
+                <p>O‘g‘il bolalar uchun zamonaviy tug‘ilgan kun taklifnomasi.</p>
+            </div>
+        
+                <div class="card-pricing">
+                    <div><strong>40 000 so‘m</strong> <span>— 100 ta taklifnoma</span></div>
+                    <div><strong>70 000 so‘m</strong> <span>— 200 ta taklifnoma</span></div>
+                    <div><strong>120 000 so‘m</strong> <span>— 500 ta taklifnoma</span></div>
+                    <div><strong>200 000 so‘m</strong> <span>— 1000 ta taklifnoma</span></div>
+                </div>
+            </div>
+
+        <div class="card">
+            <img src="{% static 'images/birthday_4.png' %}" alt="1 yosh">
+            <div class="card-info">
+                <h3>1 Yosh</h3>
+                <p>Farzandingizning birinchi tug‘ilgan kuni uchun maxsus dizayn.</p>
+            </div>
+        
+                <div class="card-pricing">
+                    <div><strong>40 000 so‘m</strong> <span>— 100 ta taklifnoma</span></div>
+                    <div><strong>70 000 so‘m</strong> <span>— 200 ta taklifnoma</span></div>
+                    <div><strong>120 000 so‘m</strong> <span>— 500 ta taklifnoma</span></div>
+                    <div><strong>200 000 so‘m</strong> <span>— 1000 ta taklifnoma</span></div>
+                </div>
+            </div>
+
+        <div class="card">
+            <img src="{% static 'images/birthday_5.png' %}" alt="10 yosh">
+            <div class="card-info">
+                <h3>10 Yosh</h3>
+                <p>10 yosh bayrami uchun yorqin va quvnoq taklifnoma.</p>
+            </div>
+        
+                <div class="card-pricing">
+                    <div><strong>40 000 so‘m</strong> <span>— 100 ta taklifnoma</span></div>
+                    <div><strong>70 000 so‘m</strong> <span>— 200 ta taklifnoma</span></div>
+                    <div><strong>120 000 so‘m</strong> <span>— 500 ta taklifnoma</span></div>
+                    <div><strong>200 000 so‘m</strong> <span>— 1000 ta taklifnoma</span></div>
+                </div>
+            </div>
+
+        <div class="card">
+            <img src="{% static 'images/birthday_6.png' %}" alt="18 yosh">
+            <div class="card-info">
+                <h3>18 Yosh</h3>
+                <p>18 yoshga to‘lish munosabati uchun zamonaviy dizayn.</p>
+            </div>
+        
+                <div class="card-pricing">
+                    <div><strong>40 000 so‘m</strong> <span>— 100 ta taklifnoma</span></div>
+                    <div><strong>70 000 so‘m</strong> <span>— 200 ta taklifnoma</span></div>
+                    <div><strong>120 000 so‘m</strong> <span>— 500 ta taklifnoma</span></div>
+                    <div><strong>200 000 so‘m</strong> <span>— 1000 ta taklifnoma</span></div>
+                </div>
+            </div>
+
+        <div class="card">
+            <img src="{% static 'images/birthday_7.png' %}" alt="20 yosh">
+            <div class="card-info">
+                <h3>20 Yosh</h3>
+                <p>20 yosh bayrami uchun chiroyli taklifnoma.</p>
+            </div>
+        
+                <div class="card-pricing">
+                    <div><strong>40 000 so‘m</strong> <span>— 100 ta taklifnoma</span></div>
+                    <div><strong>70 000 so‘m</strong> <span>— 200 ta taklifnoma</span></div>
+                    <div><strong>120 000 so‘m</strong> <span>— 500 ta taklifnoma</span></div>
+                    <div><strong>200 000 so‘m</strong> <span>— 1000 ta taklifnoma</span></div>
+                </div>
+            </div>
+
+        <div class="card">
+            <img src="{% static 'images/birthday_8.png' %}" alt="Kattalar">
+            <div class="card-info">
+                <h3>Kattalar Uchun</h3>
+                <p>Kattalar tug‘ilgan kuni uchun nafis va zamonaviy dizayn.</p>
+            </div>
+        
+                <div class="card-pricing">
+                    <div><strong>40 000 so‘m</strong> <span>— 100 ta taklifnoma</span></div>
+                    <div><strong>70 000 so‘m</strong> <span>— 200 ta taklifnoma</span></div>
+                    <div><strong>120 000 so‘m</strong> <span>— 500 ta taklifnoma</span></div>
+                    <div><strong>200 000 so‘m</strong> <span>— 1000 ta taklifnoma</span></div>
+                </div>
+            </div>
+
+    </div>
+
+
+    <!-- ================= QIZ UZATISH ================= -->
+
+    <div class="category-title">
+        <h2>Qiz Uzatish Taklifnomalari</h2>
+        <span>8 ta</span>
+    </div>
+
+    <div class="cards-grid">
+
+        <div class="card">
+            <img src="{% static 'images/qiz_1.png' %}" alt="An’anaviy">
+            <div class="card-info">
+                <h3>An’anaviy</h3>
+                <p>An’anaviy qiz uzatish marosimi uchun chiroyli taklifnoma.</p>
+            </div>
+        
+                <div class="card-pricing">
+                    <div><strong>40 000 so‘m</strong> <span>— 100 ta taklifnoma</span></div>
+                    <div><strong>70 000 so‘m</strong> <span>— 200 ta taklifnoma</span></div>
+                    <div><strong>120 000 so‘m</strong> <span>— 500 ta taklifnoma</span></div>
+                    <div><strong>200 000 so‘m</strong> <span>— 1000 ta taklifnoma</span></div>
+                </div>
+            </div>
+
+        <div class="card">
+            <img src="{% static 'images/qiz_2.png' %}" alt="Zamonaviy">
+            <div class="card-info">
+                <h3>Zamonaviy</h3>
+                <p>Zamonaviy uslubdagi qiz uzatish taklifnomasi.</p>
+            </div>
+        
+                <div class="card-pricing">
+                    <div><strong>40 000 so‘m</strong> <span>— 100 ta taklifnoma</span></div>
+                    <div><strong>70 000 so‘m</strong> <span>— 200 ta taklifnoma</span></div>
+                    <div><strong>120 000 so‘m</strong> <span>— 500 ta taklifnoma</span></div>
+                    <div><strong>200 000 so‘m</strong> <span>— 1000 ta taklifnoma</span></div>
+                </div>
+            </div>
+
+        <div class="card">
+            <img src="{% static 'images/qiz_3.png' %}" alt="Gulzor">
+            <div class="card-info">
+                <h3>Gulzor</h3>
+                <p>Gullar bilan bezatilgan nafis qiz uzatish dizayni.</p>
+            </div>
+        
+                <div class="card-pricing">
+                    <div><strong>40 000 so‘m</strong> <span>— 100 ta taklifnoma</span></div>
+                    <div><strong>70 000 so‘m</strong> <span>— 200 ta taklifnoma</span></div>
+                    <div><strong>120 000 so‘m</strong> <span>— 500 ta taklifnoma</span></div>
+                    <div><strong>200 000 so‘m</strong> <span>— 1000 ta taklifnoma</span></div>
+                </div>
+            </div>
+
+        <div class="card">
+            <img src="{% static 'images/qiz_4.png' %}" alt="Oq va pushti">
+            <div class="card-info">
+                <h3>Oq va Pushti</h3>
+                <p>Oq va pushti ranglar uyg‘unligidagi taklifnoma.</p>
+            </div>
+        
+                <div class="card-pricing">
+                    <div><strong>40 000 so‘m</strong> <span>— 100 ta taklifnoma</span></div>
+                    <div><strong>70 000 so‘m</strong> <span>— 200 ta taklifnoma</span></div>
+                    <div><strong>120 000 so‘m</strong> <span>— 500 ta taklifnoma</span></div>
+                    <div><strong>200 000 so‘m</strong> <span>— 1000 ta taklifnoma</span></div>
+                </div>
+            </div>
+
+        <div class="card">
+            <img src="{% static 'images/qiz_5.png' %}" alt="Klassik">
+            <div class="card-info">
+                <h3>Klassik</h3>
+                <p>Klassik va nafis qiz uzatish marosimi uchun.</p>
+            </div>
+        
+                <div class="card-pricing">
+                    <div><strong>40 000 so‘m</strong> <span>— 100 ta taklifnoma</span></div>
+                    <div><strong>70 000 so‘m</strong> <span>— 200 ta taklifnoma</span></div>
+                    <div><strong>120 000 so‘m</strong> <span>— 500 ta taklifnoma</span></div>
+                    <div><strong>200 000 so‘m</strong> <span>— 1000 ta taklifnoma</span></div>
+                </div>
+            </div>
+
+        <div class="card">
+            <img src="{% static 'images/qiz_6.png' %}" alt="Moviy">
+            <div class="card-info">
+                <h3>Moviy</h3>
+                <p>Moviy rangdagi sokin va chiroyli taklifnoma.</p>
+            </div>
+        
+                <div class="card-pricing">
+                    <div><strong>40 000 so‘m</strong> <span>— 100 ta taklifnoma</span></div>
+                    <div><strong>70 000 so‘m</strong> <span>— 200 ta taklifnoma</span></div>
+                    <div><strong>120 000 so‘m</strong> <span>— 500 ta taklifnoma</span></div>
+                    <div><strong>200 000 so‘m</strong> <span>— 1000 ta taklifnoma</span></div>
+                </div>
+            </div>
+
+        <div class="card">
+            <img src="{% static 'images/qiz_7.png' %}" alt="Yashil">
+            <div class="card-info">
+                <h3>Yashil</h3>
+                <p>Yashil rangdagi zamonaviy qiz uzatish dizayni.</p>
+            </div>
+        
+                <div class="card-pricing">
+                    <div><strong>40 000 so‘m</strong> <span>— 100 ta taklifnoma</span></div>
+                    <div><strong>70 000 so‘m</strong> <span>— 200 ta taklifnoma</span></div>
+                    <div><strong>120 000 so‘m</strong> <span>— 500 ta taklifnoma</span></div>
+                    <div><strong>200 000 so‘m</strong> <span>— 1000 ta taklifnoma</span></div>
+                </div>
+            </div>
+
+        <div class="card">
+            <img src="{% static 'images/qiz_8.png' %}" alt="Minimal">
+            <div class="card-info">
+                <h3>Minimal</h3>
+                <p>Sodda va nafis minimal qiz uzatish taklifnomasi.</p>
+            </div>
+        
+                <div class="card-pricing">
+                    <div><strong>40 000 so‘m</strong> <span>— 100 ta taklifnoma</span></div>
+                    <div><strong>70 000 so‘m</strong> <span>— 200 ta taklifnoma</span></div>
+                    <div><strong>120 000 so‘m</strong> <span>— 500 ta taklifnoma</span></div>
+                    <div><strong>200 000 so‘m</strong> <span>— 1000 ta taklifnoma</span></div>
+                </div>
+            </div>
+
+    </div>
+
+
+    <!-- ================= EL OSHI ================= -->
+
+    <div class="category-title">
+        <h2>El Oshi Taklifnomalari</h2>
+        <span>8 ta</span>
+    </div>
+
+    <div class="cards-grid">
+
+        <div class="card">
+            <img src="{% static 'images/eloshi_1.png' %}" alt="An’anaviy el oshi">
+            <div class="card-info">
+                <h3>An’anaviy El Oshi</h3>
+                <p>An’anaviy el oshi marosimi uchun samimiy taklifnoma.</p>
+            </div>
+        
+                <div class="card-pricing">
+                    <div><strong>40 000 so‘m</strong> <span>— 100 ta taklifnoma</span></div>
+                    <div><strong>70 000 so‘m</strong> <span>— 200 ta taklifnoma</span></div>
+                    <div><strong>120 000 so‘m</strong> <span>— 500 ta taklifnoma</span></div>
+                    <div><strong>200 000 so‘m</strong> <span>— 1000 ta taklifnoma</span></div>
+                </div>
+            </div>
+
+        <div class="card">
+            <img src="{% static 'images/eloshi_2.png' %}" alt="Qozon oshi">
+            <div class="card-info">
+                <h3>Qozon Oshi</h3>
+                <p>Qozon oshi marosimi uchun maxsus taklifnoma.</p>
+            </div>
+        
+                <div class="card-pricing">
+                    <div><strong>40 000 so‘m</strong> <span>— 100 ta taklifnoma</span></div>
+                    <div><strong>70 000 so‘m</strong> <span>— 200 ta taklifnoma</span></div>
+                    <div><strong>120 000 so‘m</strong> <span>— 500 ta taklifnoma</span></div>
+                    <div><strong>200 000 so‘m</strong> <span>— 1000 ta taklifnoma</span></div>
+                </div>
+            </div>
+
+        <div class="card">
+            <img src="{% static 'images/eloshi_3.png' %}" alt="Ramazon oshi">
+            <div class="card-info">
+                <h3>Ramazon Oshi</h3>
+                <p>Ramazon oyidagi marosim uchun chiroyli taklifnoma.</p>
+            </div>
+        
+                <div class="card-pricing">
+                    <div><strong>40 000 so‘m</strong> <span>— 100 ta taklifnoma</span></div>
+                    <div><strong>70 000 so‘m</strong> <span>— 200 ta taklifnoma</span></div>
+                    <div><strong>120 000 so‘m</strong> <span>— 500 ta taklifnoma</span></div>
+                    <div><strong>200 000 so‘m</strong> <span>— 1000 ta taklifnoma</span></div>
+                </div>
+            </div>
+
+        <div class="card">
+            <img src="{% static 'images/eloshi_4.png' %}" alt="Qishloq oshi">
+            <div class="card-info">
+                <h3>Qishloq Oshi</h3>
+                <p>Qishloq oshi uchun samimiy va an’anaviy dizayn.</p>
+            </div>
+        
+                <div class="card-pricing">
+                    <div><strong>40 000 so‘m</strong> <span>— 100 ta taklifnoma</span></div>
+                    <div><strong>70 000 so‘m</strong> <span>— 200 ta taklifnoma</span></div>
+                    <div><strong>120 000 so‘m</strong> <span>— 500 ta taklifnoma</span></div>
+                    <div><strong>200 000 so‘m</strong> <span>— 1000 ta taklifnoma</span></div>
+                </div>
+            </div>
+        <div class="card">
+            <img src="{% static 'images/eloshi_5.png' %}" alt="Katta oshi">
+            <div class="card-info">
+                <h3>Katta Oshi</h3>
+                <p>Katta dasturxon uchun chiroyli taklifnoma.</p>
+            </div>
+        
+                <div class="card-pricing">
+                    <div><strong>40 000 so‘m</strong> <span>— 100 ta taklifnoma</span></div>
+                    <div><strong>70 000 so‘m</strong> <span>— 200 ta taklifnoma</span></div>
+                    <div><strong>120 000 so‘m</strong> <span>— 500 ta taklifnoma</span></div>
+                    <div><strong>200 000 so‘m</strong> <span>— 1000 ta taklifnoma</span></div>
+                </div>
+            </div>
+
+        <div class="card">
+            <img src="{% static 'images/eloshi_6.png' %}" alt="Oddiy oshi">
+            <div class="card-info">
+                <h3>Oddiy Oshi</h3>
+                <p>Oddiy va qulay el oshi taklifnomasi.</p>
+            </div>
+        
+                <div class="card-pricing">
+                    <div><strong>40 000 so‘m</strong> <span>— 100 ta taklifnoma</span></div>
+                    <div><strong>70 000 so‘m</strong> <span>— 200 ta taklifnoma</span></div>
+                    <div><strong>120 000 so‘m</strong> <span>— 500 ta taklifnoma</span></div>
+                    <div><strong>200 000 so‘m</strong> <span>— 1000 ta taklifnoma</span></div>
+                </div>
+            </div>
+
+        <div class="card">
+            <img src="{% static 'images/eloshi_7.png' %}" alt="Dasturxon">
+            <div class="card-info">
+                <h3>Dasturxon</h3>
+                <p>Dasturxon marosimi uchun nafis va chiroyli dizayn.</p>
+            </div>
+        
+                <div class="card-pricing">
+                    <div><strong>40 000 so‘m</strong> <span>— 100 ta taklifnoma</span></div>
+                    <div><strong>70 000 so‘m</strong> <span>— 200 ta taklifnoma</span></div>
+                    <div><strong>120 000 so‘m</strong> <span>— 500 ta taklifnoma</span></div>
+                    <div><strong>200 000 so‘m</strong> <span>— 1000 ta taklifnoma</span></div>
+                </div>
+            </div>
+
+        <div class="card">
+            <img src="{% static 'images/eloshi_8.png' %}" alt="Mehr oshi">
+            <div class="card-info">
+                <h3>Mehr Oshi</h3>
+                <p>Yaqinlar bilan mehrli marosim uchun taklifnoma.</p>
+            </div>
+        
+                <div class="card-pricing">
+                    <div><strong>40 000 so‘m</strong> <span>— 100 ta taklifnoma</span></div>
+                    <div><strong>70 000 so‘m</strong> <span>— 200 ta taklifnoma</span></div>
+                    <div><strong>120 000 so‘m</strong> <span>— 500 ta taklifnoma</span></div>
+                    <div><strong>200 000 so‘m</strong> <span>— 1000 ta taklifnoma</span></div>
+                </div>
+            </div>
+</footer>
+
+    </div>
+<footer class="footer">
+    <div class="footer-grid">
+
+        <div class="footer-column">
+            <h3>TechNova</h3>
+
+            <p>
+                Zamonaviy texnologiyalar va sifatli xizmatlar
+                bilan sizga yordam beramiz.
+            </p>
+
+            <div class="socials">
+                <a href="#" aria-label="Telegram">T</a>
+                <a href="#" aria-label="Instagram">I</a>
+                <a href="#" aria-label="Facebook">F</a>
+            </div>
+        </div>
+
+        <div class="footer-column">
+            <h4>Tezkor havolalar</h4>
+
+            <ul class="link-list">
+                <li>
+                    <span class="dot"></span>
+                    <a href="{% url 'home' %}">Bosh sahifa</a>
+                </li>
+                <li>
+                    <span class="dot"></span>
+                    <a href="{% url 'boglanish' %}">Bog'lanish</a>
+                </li>
+                <li>
+                    <span class="dot"></span>
+                    <a href="{% url 'biz_haqimizda' %}">biz haqimizda</a>
+                </li>
+
+                <li>
+                    <span class="dot"></span>
+                    <a href="#">Kontakt</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h4>Kontakt</h4>
+
+            <ul class="contact-list">
+                <li>
+                    <div class="icon-circle">✉</div>
+                    <span class="text">asilcikbro@gmail.com</span>
+                </li>
+
+                <li>
+                    <div class="icon-circle">☎</div>
+                    <span class="text">tel:maxviy</span>
+                </li>
+
+                <li>
+                    <div class="icon-circle">⌖</div>
+                    <span class="text">Toshkent, O‘zbekiston</span>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,280 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Qiz Uzatish Taklifnomalari</title>
+
+    <link rel="stylesheet" href="{% static 'css/qiz.css' %}">
+</head>
+
+<body>
+
+<header class="header">
+
+        <div class="logo">
+            <span>Taklif_noma</span>
+            <div class="logo-icon">
+                <div class="small-square top"></div>
+                <div class="small-square middle"></div>
+                <div class="small-square bottom"></div>
+                <div class="heart"><svg viewBox="0 0 24 24" width="20" height="20" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M12 21.35c-.2 0-.4-.07-.55-.2C7.4 17.9 3 14.2 3 9.85 3 6.98 5.24 4.75 8.05 4.75c1.6 0 3.13.76 4 1.97a4.9 4.9 0 0 1 4-1.97C18.76 4.75 21 6.98 21 9.85c0 4.35-4.4 8.05-8.45 11.3-.15.13-.35.2-.55.2Z"/></svg></div>
+            </div>
+        </div>
+
+    <nav>
+        <a href="{% url 'home' %}">Bosh sahifa</a>
+        <a href="{% url 'biz_haqimizda' %}">Biz haqimizda</a>
+        <a href="{% url 'boglanish' %}">Bog‘lanish</a>
+    </nav>
+
+</header>
+
+
+<main>
+
+    <div class="category-title">
+        <h1>Qiz Uzatish Taklifnomalari</h1>
+        <span>8 ta</span>
+    </div>
+
+
+    <div class="cards-grid">
+
+        <div class="card">
+            <img src="{% static 'images/qiz_1.png' %}">
+            <div class="card-info">
+                <h3>An’anaviy</h3>
+                <p>An’anaviy qiz uzatish marosimi uchun chiroyli taklifnoma.</p>
+                <div class="card-price">
+                    <strong>40 000 so‘m</strong>
+                    <span>100 ta taklifnoma</span>
+                </div>
+                <button type="button" class="button12" data-kategoriya="qiz" onclick="openOrder(this)">Buyurtma berish <span>→</span></button>
+
+            </div>
+        
+                <div class="card-pricing">
+                    <div><strong>40 000 so‘m</strong> <span>— 100 ta taklifnoma</span></div>
+                    <div><strong>70 000 so‘m</strong> <span>— 200 ta taklifnoma</span></div>
+                    <div><strong>120 000 so‘m</strong> <span>— 500 ta taklifnoma</span></div>
+                    <div><strong>200 000 so‘m</strong> <span>— 1000 ta taklifnoma</span></div>
+                </div>
+            </div>
+
+        <div class="card">
+            <img src="{% static 'images/qiz_2.png' %}">
+            <div class="card-info">
+                <h3>Zamonaviy</h3>
+                <p>Zamonaviy uslubdagi qiz uzatish taklifnomasi.</p>
+                <div class="card-price">
+                    <strong>40 000 so‘m</strong>
+                    <span>100 ta taklifnoma</span>
+                </div>
+                <button type="button" class="button12" data-kategoriya="qiz" onclick="openOrder(this)">Buyurtma berish <span>→</span></button>
+
+            </div>
+        
+                <div class="card-pricing">
+                    <div><strong>40 000 so‘m</strong> <span>— 100 ta taklifnoma</span></div>
+                    <div><strong>70 000 so‘m</strong> <span>— 200 ta taklifnoma</span></div>
+                    <div><strong>120 000 so‘m</strong> <span>— 500 ta taklifnoma</span></div>
+                    <div><strong>200 000 so‘m</strong> <span>— 1000 ta taklifnoma</span></div>
+                </div>
+            </div>
+
+        <div class="card">
+            <img src="{% static 'images/qiz_3.png' %}">
+            <div class="card-info">
+                <h3>Gulzor</h3>
+                <p>Gullar bilan bezatilgan nafis qiz uzatish dizayni.</p>
+                <div class="card-price">
+                    <strong>40 000 so‘m</strong>
+                    <span>100 ta taklifnoma</span>
+                </div>
+                <button type="button" class="button12" data-kategoriya="qiz" onclick="openOrder(this)">Buyurtma berish <span>→</span></button>
+
+            </div>
+        
+                <div class="card-pricing">
+                    <div><strong>40 000 so‘m</strong> <span>— 100 ta taklifnoma</span></div>
+                    <div><strong>70 000 so‘m</strong> <span>— 200 ta taklifnoma</span></div>
+                    <div><strong>120 000 so‘m</strong> <span>— 500 ta taklifnoma</span></div>
+                    <div><strong>200 000 so‘m</strong> <span>— 1000 ta taklifnoma</span></div>
+                </div>
+            </div>
+
+        <div class="card">
+            <img src="{% static 'images/qiz_4.png' %}">
+            <div class="card-info">
+                <h3>Oq va Pushti</h3>
+                <p>Oq va pushti ranglar uyg‘unligidagi taklifnoma.</p>
+                <div class="card-price">
+                    <strong>40 000 so‘m</strong>
+                    <span>100 ta taklifnoma</span>
+                </div>
+                <button type="button" class="button12" data-kategoriya="qiz" onclick="openOrder(this)">Buyurtma berish <span>→</span></button>
+
+            </div>
+        
+                <div class="card-pricing">
+                    <div><strong>40 000 so‘m</strong> <span>— 100 ta taklifnoma</span></div>
+                    <div><strong>70 000 so‘m</strong> <span>— 200 ta taklifnoma</span></div>
+                    <div><strong>120 000 so‘m</strong> <span>— 500 ta taklifnoma</span></div>
+                    <div><strong>200 000 so‘m</strong> <span>— 1000 ta taklifnoma</span></div>
+                </div>
+            </div>
+
+        <div class="card">
+            <img src="{% static 'images/qiz_5.png' %}">
+            <div class="card-info">
+                <h3>Klassik</h3>
+                <p>Klassik va nafis qiz uzatish marosimi uchun.</p>
+                <div class="card-price">
+                    <strong>40 000 so‘m</strong>
+                    <span>100 ta taklifnoma</span>
+                </div>
+                <button type="button" class="button12" data-kategoriya="qiz" onclick="openOrder(this)">Buyurtma berish <span>→</span></button>
+
+            </div>
+        
+                <div class="card-pricing">
+                    <div><strong>40 000 so‘m</strong> <span>— 100 ta taklifnoma</span></div>
+                    <div><strong>70 000 so‘m</strong> <span>— 200 ta taklifnoma</span></div>
+                    <div><strong>120 000 so‘m</strong> <span>— 500 ta taklifnoma</span></div>
+                    <div><strong>200 000 so‘m</strong> <span>— 1000 ta taklifnoma</span></div>
+                </div>
+            </div>
+
+        <div class="card">
+            <img src="{% static 'images/qiz_6.png' %}">
+            <div class="card-info">
+                <h3>Moviy</h3>
+                <p>Moviy rangdagi sokin va chiroyli taklifnoma.</p>
+                <div class="card-price">
+                    <strong>40 000 so‘m</strong>
+                    <span>100 ta taklifnoma</span>
+                </div>
+                <button type="button" class="button12" data-kategoriya="qiz" onclick="openOrder(this)">Buyurtma berish <span>→</span></button>
+
+            </div>
+        
+                <div class="card-pricing">
+                    <div><strong>40 000 so‘m</strong> <span>— 100 ta taklifnoma</span></div>
+                    <div><strong>70 000 so‘m</strong> <span>— 200 ta taklifnoma</span></div>
+                    <div><strong>120 000 so‘m</strong> <span>— 500 ta taklifnoma</span></div>
+                    <div><strong>200 000 so‘m</strong> <span>— 1000 ta taklifnoma</span></div>
+                </div>
+            </div>
+
+        <div class="card">
+            <img src="{% static 'images/qiz_7.png' %}">
+            <div class="card-info">
+                <h3>Yashil</h3>
+                <p>Yashil rangdagi zamonaviy qiz uzatish dizayni.</p>
+                <div class="card-price">
+                    <strong>40 000 so‘m</strong>
+                    <span>100 ta taklifnoma</span>
+                </div>
+                <button type="button" class="button12" data-kategoriya="qiz" onclick="openOrder(this)">Buyurtma berish <span>→</span></button>
+
+            </div>
+        
+                <div class="card-pricing">
+                    <div><strong>40 000 so‘m</strong> <span>— 100 ta taklifnoma</span></div>
+                    <div><strong>70 000 so‘m</strong> <span>— 200 ta taklifnoma</span></div>
+                    <div><strong>120 000 so‘m</strong> <span>— 500 ta taklifnoma</span></div>
+                    <div><strong>200 000 so‘m</strong> <span>— 1000 ta taklifnoma</span></div>
+                </div>
+            </div>
+
+        <div class="card">
+            <img src="{% static 'images/qiz_8.png' %}">
+            <div class="card-info">
+                <h3>Minimal</h3>
+                <p>Sodda va nafis minimal qiz uzatish taklifnomasi.</p>
+                <div class="card-price">
+                    <strong>40 000 so‘m</strong>
+                    <span>100 ta taklifnoma</span>
+                </div>
+                <button type="button" class="button12" data-kategoriya="qiz" onclick="openOrder(this)">Buyurtma berish <span>→</span></button>
+
+            </div>
+        
+                <div class="card-pricing">
+                    <div><strong>40 000 so‘m</strong> <span>— 100 ta taklifnoma</span></div>
+                    <div><strong>70 000 so‘m</strong> <span>— 200 ta taklifnoma</span></div>
+                    <div><strong>120 000 so‘m</strong> <span>— 500 ta taklifnoma</span></div>
+                    <div><strong>200 000 so‘m</strong> <span>— 1000 ta taklifnoma</span></div>
+                </div>
+            </div>
+
+    </div>
+
+</main>
+<footer class="footer">
+
+    <div class="footer-grid">
+
+        <div class="footer-column">
+
+            <h3>Taklif_noma</h3>
+
+            <p>
+                Zamonaviy va chiroyli elektron
+                taklifnomalar yarating.
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>Tezkor havolalar</h4>
+
+ <ul class="link-list">
+
+                <li>
+                    <a href="{% url 'toy' %}">
+                        toy taklif noma
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{% url 'tugulgankun' %}">
+                        tugulgankun  taklif noma
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{% url 'eloshi' %}">
+                        el oshi taklif noma
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{% url 'Yubley' %}">
+                        yubley taklif noma
+                    </a>
+                </li>
+            </ul>
+
+
+        </div>
+
+    </div>
+
+</footer>
+<script>
+function openOrder(button) {
+    const card = button.closest('.card');
+    const title = card.querySelector('h3')?.textContent.trim() || 'Tanlangan shablon';
+    const category = button.dataset.kategoriya;
+    window.location.href = `/buyurtma/?kategoriya=${encodeURIComponent(category)}&shablon=${encodeURIComponent(title)}`;
+}
+</script>
+</body>
+</html>

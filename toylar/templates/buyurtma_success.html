@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buyurtma qabul qilindi</title>
+    <link rel="stylesheet" href="{% static 'css/buyurtma.css' %}">
+</head>
+<body>
+<main class="order-page">
+<section class="order-card success-card">
+    <div class="success-icon">✓</div>
+    <span class="eyebrow">MUVAFFAQIYATLI</span>
+    <h1>Buyurtmangiz qabul qilindi!</h1>
+    <p><strong>{{ kategoriya_nomi }}</strong> — <strong>{{ shablon }}</strong></p>
+
+    {% if telegram_sent %}
+        <p class="success-text">Buyurtma bazaga saqlandi va Telegram botingizga yuborildi ✅</p>
+    {% else %}
+        <p class="success-text">Buyurtma bazaga saqlandi ✅</p>
+        <p>Telegramga yuborishda muammo bo‘ldi. {% if telegram_error %}{{ telegram_error }}{% endif %}</p>
+    {% endif %}
+
+    <p><strong>Buyurtma №:</strong> {{ order.id }}</p>
+    <a class="submit-btn" href="{% url 'home' %}">Bosh sahifaga qaytish</a>
+</section>
+</main>
+<p style="margin-top:15px;">⚠️ Yuborilgan buyurtmani bekor qilib bo‘lmaydi.</p>
+</body>
+</html>

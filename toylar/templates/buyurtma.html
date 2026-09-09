@@ -1,0 +1,92 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buyurtma berish — Taklif_noma</title>
+    <link rel="stylesheet" href="{% static 'css/buyurtma.css' %}">
+</head>
+<body>
+<header class="header">
+    <a class="logo" href="{% url 'home' %}">Taklif_noma <span>♥</span></a>
+    <nav>
+        <a href="{% url 'home' %}">Bosh sahifa</a>
+        <a href="{% url 'biz_haqimizda' %}">Biz haqimizda</a>
+        <a href="{% url 'boglanish' %}">Bog‘lanish</a>
+    </nav>
+</header>
+
+<main class="order-page">
+<section class="order-card">
+    {% if error %}<div class="form-error">{{ error }}</div>{% endif %}
+    <div class="order-head">
+        <div>
+            <span class="eyebrow">BUYURTMA</span>
+            <h1>{{ kategoriya_nomi }}</h1>
+            <p>Tanlangan shablon: <strong>{{ shablon }}</strong></p>
+        </div>
+        <div class="badge">✓ Shablon tanlandi</div>
+    </div>
+
+    <form method="post" autocomplete="on">
+        {% csrf_token %}
+        <input type="hidden" name="kategoriya" value="{{ kategoriya }}">
+        <input type="hidden" name="shablon" value="{{ shablon }}">
+
+        <div class="form-grid">
+            <label>
+                Ism / F.I.Sh. <span class="required">*</span>
+                <input name="ism" type="text" placeholder="Ism va familiyangizni kiriting" required>
+            </label>
+            <label>
+                Telefon raqam <span class="required">*</span>
+                <input name="telefon" type="tel" inputmode="tel" placeholder="+998 90 123 45 67" required>
+            </label>
+            <label>
+                Telegram username <span class="required">*</span>
+                <input name="telegram_username" type="text" value="{{ request.POST.telegram_username|default:"" }}" placeholder="@username" required pattern="^@?[A-Za-z0-9_]{5,32}$" title="Masalan: @username">
+                <small>Telegram username majburiy. Masalan: @asilbek</small>
+            </label>
+            <label>
+                Tadbir sanasi <span class="required">*</span>
+                <input name="sana" type="date" value="{{ request.POST.sana|default:"" }}" required>
+            </label>
+
+            {% for key, label, input_type, placeholder, required in fields %}
+            <label>
+                {{ label }}{% if required %} <span class="required">*</span>{% endif %}
+                <input name="{{ key }}" type="{{ input_type }}" {% if placeholder %}placeholder="{{ placeholder }}"{% endif %} {% if input_type == 'number' %}min="1"{% endif %} {% if required %}required{% endif %}>
+            </label>
+            {% endfor %}
+
+            <label class="full">
+                Tadbir manzili <span class="required">*</span>
+                <input name="manzil" type="text" placeholder="To‘liq manzilni kiriting" required>
+            </label>
+            <label class="full">
+                Qo‘shimcha izoh
+                <textarea name="izoh" rows="5" placeholder="Taklifnomada bo‘lishi kerak bo‘lgan boshqa ma’lumotlar..."></textarea>
+            </label>
+        </div>
+
+        <div class="actions">
+            <a class="back" href="javascript:history.back()">← Orqaga</a>
+            
+        <button class="submit-btn" type="submit">Buyurtmani yuborish <span>→</span></button>
+        </div>
+    </form>
+</section>
+</main>
+<script>
+document.querySelector('form').addEventListener('submit', function(e) {
+    const tg = this.querySelector('[name="telegram_username"]');
+    const value = tg.value.trim();
+    if (!value) { e.preventDefault(); alert('Telegram usernameni kiriting!'); tg.focus(); return; }
+    if (!value.startsWith('@')) tg.value = '@' + value;
+});
+</script>
+</body>
+</html>
+
+
