@@ -3,7 +3,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 /* =========================
    BODY
 ========================= */
@@ -13,7 +12,6 @@ html {
     scrollbar-width: thin;
     scrollbar-color: #8b5cf6 #0b1220;
 }
-
 body {
     font-family: "Inter", sans-serif;
     background: #0b1220;
@@ -22,7 +20,6 @@ body {
     overflow-x: hidden;
     overflow-y: auto;
 }
-
 /* =========================
    CUSTOM SCROLLBAR
 ========================= */
@@ -30,11 +27,9 @@ body {
 ::-webkit-scrollbar {
     width: 10px;
 }
-
 ::-webkit-scrollbar-track {
     background: #0b1220;
 }
-
 ::-webkit-scrollbar-thumb {
     background: linear-gradient(
         180deg,
@@ -43,11 +38,9 @@ body {
     );
     border-radius: 10px;
 }
-
 ::-webkit-scrollbar-thumb:hover {
     background: #c044ff;
 }
-
 /* =========================
    HEADER
 ========================= */
@@ -55,14 +48,11 @@ body {
 .header {
     width: 100%;
     height: 90px;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     padding: 7px 64px 0 63px;
 }
-
 /* =========================
    LOGO
 ========================= */
@@ -71,80 +61,62 @@ body {
     display: flex;
     align-items: center;
     gap: 7px;
-
     color: #a72ee4;
     font-size: 34px;
     font-weight: 700;
 }
-
 .logo-icon {
     width: 56px;
     height: 68px;
-
     border: 2px solid #a72ee4;
-
     position: relative;
-
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
 .heart {
     line-height: 1;
     color: #a72ee4;
     margin-top: -4px;
 }
-
 /* =========================
    LOGO SMALL SQUARES
 ========================= */
 
 .small-square {
     position: absolute;
-
     width: 9px;
     height: 9px;
-
     background: #0b1220;
     border: 2px solid #a72ee4;
 }
-
 .small-square.top {
     left: -6px;
     top: 6px;
 }
-
 .small-square.middle {
     left: -6px;
     top: 28px;
 }
-
 .small-square.bottom {
     left: -6px;
     bottom: 6px;
 }
-
 /* =========================
    NAVIGATION
 ========================= */
 
 nav a {
     margin: 15px;
-
     color: #d1d5df;
     text-decoration: none;
-
     font-size: 17px;
     font-weight: 500;
-
     transition: 0.3s;
 }
-
 nav a:hover {
     color: #b42fe8;
 }
-
 /* =========================
    ABOUT SECTION
 ========================= */
@@ -155,10 +127,8 @@ nav a:hover {
     --tn-card-border: #232838;
     --tn-purple: #8b5cf6;
     --tn-text: #e6e8ee;
-
     background: var(--tn-bg);
     color: var(--tn-text);
-
     font-family:
         -apple-system,
         BlinkMacSystemFont,
@@ -166,10 +136,8 @@ nav a:hover {
         Roboto,
         Arial,
         sans-serif;
-
     padding: 56px 24px 64px;
 }
-
 /* =========================
    ABOUT RESET
 ========================= */
@@ -177,7 +145,6 @@ nav a:hover {
 .tn-about * {
     box-sizing: border-box;
 }
-
 /* =========================
    ABOUT WRAPPER
 ========================= */
@@ -186,7 +153,6 @@ nav a:hover {
     max-width: 1040px;
     margin: 0 auto;
 }
-
 /* =========================
    ABOUT TITLE
 ========================= */
@@ -194,14 +160,10 @@ nav a:hover {
 .tn-about h1 {
     font-size: 40px;
     font-weight: 800;
-
     color: var(--tn-purple);
-
     margin: 0 0 28px;
-
     line-height: 1.2;
 }
-
 /* =========================
    ABOUT TEXT
 ========================= */
@@ -209,14 +171,10 @@ nav a:hover {
 .tn-about p {
     font-size: 17px;
     line-height: 1.7;
-
     color: var(--tn-text);
-
     margin: 0 0 20px;
-
     max-width: 900px;
 }
-
 /* =========================
    ABOUT SUBTITLE
 ========================= */
@@ -224,26 +182,19 @@ nav a:hover {
 .tn-about h2 {
     font-size: 26px;
     font-weight: 700;
-
     color: #fff;
-
     margin: 40px 0 24px;
-
     line-height: 1.3;
 }
-
 /* =========================
    ABOUT GRID
 ========================= */
 
 .tn-about .tn-grid {
     display: grid;
-
     grid-template-columns: 1fr 1fr;
-
     gap: 16px;
 }
-
 /* =========================
    ABOUT CARD
 ========================= */
@@ -251,36 +202,25 @@ nav a:hover {
 .tn-about .tn-card {
     display: flex;
     align-items: center;
-
     gap: 14px;
-
     background: var(--tn-card-bg);
-
     border: 1px solid var(--tn-card-border);
-
     border-radius: 12px;
-
     padding: 18px 20px;
 }
-
 /* =========================
    ABOUT ICON
 ========================= */
 
 .tn-about .tn-icon {
     flex: 0 0 22px;
-
     width: 22px !important;
     height: 22px !important;
-
     max-width: 22px;
     max-height: 22px;
-
     color: var(--tn-purple);
-
     display: block;
 }
-
 /* =========================
    ABOUT CARD TEXT
 ========================= */
@@ -288,14 +228,10 @@ nav a:hover {
 .tn-about .tn-card span {
     font-size: 15.5px;
     font-weight: 600;
-
     color: #f1f2f6;
-
     line-height: 1.4;
-
     margin: 0;
 }
-
 /* =========================
    LINKS
 ========================= */
@@ -304,87 +240,74 @@ nav a:hover {
     text-decoration: none;
     color: aliceblue;
 }
-
 /* =========================
    MOBILE
 ========================= */
 
 @media (max-width: 640px) {
-
     .tn-about .tn-grid {
         grid-template-columns: 1fr;
     }
-
     .tn-about h1 {
         font-size: 30px;
     }
-
     .header {
         padding: 7px 20px 0 20px;
     }
-
     .logo {
         font-size: 26px;
     }
-
     .logo-icon {
         width: 45px;
         height: 55px;
     }
-
     nav a {
         margin: 7px;
         font-size: 14px;
     }
 }
-  * { box-sizing: border-box; }
-
-  body {
+* {
+    box-sizing: border-box;
+}
+body {
     margin: 0;
     background: #05060f;
     font-family: 'Segoe UI', Arial, sans-serif;
-  }
-
-  .footer {
+}
+.footer {
     background: #10122b;
     padding: 48px 64px 32px;
-  }
-
-  .footer-grid {
+}
+.footer-grid {
     display: grid;
     grid-template-columns: 1.3fr 1fr 1fr;
     gap: 32px;
     max-width: 1200px;
     margin: 0 auto;
-  }
-
-  .footer h3 {
+}
+.footer h3 {
     color: #a78bfa;
     font-size: 22px;
     font-weight: 700;
     margin: 0 0 14px;
-  }
-
-  .footer h4 {
+}
+.footer h4 {
     color: #f2f3fa;
     font-size: 18px;
     font-weight: 700;
     margin: 0 0 18px;
-  }
-
-  .footer p {
+}
+.footer p {
     color: #9ca0c0;
     font-size: 14px;
     line-height: 1.6;
     margin: 0 0 20px;
-  }
-
-  .socials {
+}
+.socials {
     display: flex;
     gap: 10px;
-  }
-
-  .socials a {
+}
+.socials a {
     width: 36px;
     height: 36px;
     border-radius: 50%;
@@ -395,71 +318,60 @@ nav a:hover {
     color: #b8bbd6;
     text-decoration: none;
     transition: background 0.2s;
-  }
-
-  .socials a:hover {
+}
+.socials a:hover {
     background: rgba(167,139,250,0.25);
-  }
-
-  .socials svg {
+}
+.socials svg {
     width: 16px;
     height: 16px;
     fill: currentColor;
-  }
-
-  .link-list {
+}
+.link-list {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
     flex-direction: column;
     gap: 12px;
-  }
-
-  .link-list li {
+}
+.link-list li {
     display: flex;
     align-items: center;
     gap: 8px;
-  }
-
-  .link-list .dot {
+}
+.link-list .dot {
     width: 5px;
     height: 5px;
     border-radius: 50%;
     background: #a78bfa;
     flex-shrink: 0;
-  }
-
-  .link-list a {
+}
+.link-list a {
     color: #b8bbd6;
     font-size: 14px;
     text-decoration: none;
-  }
-
-  .link-list a:hover {
+}
+.link-list a:hover {
     color: #a78bfa;
-  }
-
-  .link-list a.active {
+}
+.link-list a.active {
     color: #a78bfa;
-  }
-
-  .contact-list {
+}
+.contact-list {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
     flex-direction: column;
     gap: 18px;
-  }
-
-  .contact-list li {
+}
+.contact-list li {
     display: flex;
     align-items: center;
     gap: 12px;
-  }
-
-  .icon-circle {
+}
+.icon-circle {
     width: 32px;
     height: 32px;
     border-radius: 50%;
@@ -469,24 +381,21 @@ nav a:hover {
     justify-content: center;
     color: #a78bfa;
     flex-shrink: 0;
-  }
-
-  .icon-circle svg {
+}
+.icon-circle svg {
     width: 15px;
     height: 15px;
     fill: currentColor;
-  }
-
-  .contact-list span.text {
+}
+.contact-list span.text {
     color: #b8bbd6;
     font-size: 14px;
-  }
-
-  @media (max-width: 700px) {
+}
+@media (max-width: 700px) {
     .footer-grid {
-      grid-template-columns: 1fr;
+        grid-template-columns: 1fr;
     }
     .footer {
-      padding: 32px 24px;
+        padding: 32px 24px;
     }
-  }
+}
