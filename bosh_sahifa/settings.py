@@ -193,12 +193,7 @@ SITE_URL = os.getenv(
 # =========================
 
 CSRF_TRUSTED_ORIGINS = [
-    x.strip()
-    for x in os.getenv(
-        "CSRF_TRUSTED_ORIGINS",
-        ""
-    ).split(",")
-    if x.strip()
+    "https://taklifnoma-project-wvlur.faable.link",
 ]
 
 
