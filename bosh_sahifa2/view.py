@@ -19,7 +19,7 @@ from django.views.decorators.csrf import csrf_exempt
 
 from aiogram.types import Update
 
-from .telegram_bot import bot, dp
+from telegram_bot import bot, dp
 
 
 @csrf_exempt
