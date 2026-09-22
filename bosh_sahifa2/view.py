@@ -12,36 +12,41 @@ def invitations_list(request):
             "invitations": invitations
         }
     )
+import asyncio
 import json
 
-from django.http import HttpResponse
+from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 
-from aiogram.types import Update
-
-from telegram_bot import bot, dp
+from telegram_bot import process_update
 
 
 @csrf_exempt
-async def telegram_webhook(request):
-
+def telegram_webhook(request):
     if request.method != "POST":
-        return HttpResponse("Telegram webhook ishlayapti.")
-
-    try:
-        data = json.loads(request.body.decode("utf-8"))
-
-        update = Update.model_validate(data)
-
-        await dp.feed_update(
-            bot,
-            update,
+        return JsonResponse(
+            {"error": "Only POST allowed"},
+            status=405
         )
 
-        return HttpResponse("OK")
+    try:
+        data = json.loads(
+            request.body.decode("utf-8")
+        )
 
-    except Exception as exc:
-        return HttpResponse(
-            f"Webhook error: {exc}",
-            status=500,
+        asyncio.run(
+            process_update(data)
+        )
+
+        return JsonResponse(
+            {"ok": True}
+        )
+
+    except Exception as e:
+        return JsonResponse(
+            {
+                "ok": False,
+                "error": str(e)
+            },
+            status=500
         )
