@@ -1,10 +1,8 @@
 from django.urls import path
-from .view import invitations_list
+from .view import invitations_list,telegram_webhook
 
-
-from django.urls import path
-from .view import invitations_list
 
 urlpatterns = [
     path('invitations/', invitations_list, name='invitations_list'),
+    path("telegram/webhook/", telegram_webhook, name="telegram_webhook"),
 ]
